@@ -17,8 +17,6 @@ const HomeCardIconContainer = styled.div`
 `;
 
 const Img = styled.img`
-  width: 24px;
-  height: 23px;
   object-fit: contain;
 `;
 
