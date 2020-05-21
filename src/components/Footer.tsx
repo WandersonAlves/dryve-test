@@ -29,7 +29,7 @@ const SubText = styled.span`
 `;
 
 const Footer = () => (
-  <FlexColumn>
+  <FlexColumn style={{ width: '100%', gridRow: 'row-start 12', gridColumn: 'span 12'}}>
     <Separator />
     <span style={{marginBottom: 20}}/>
     <FlexRow style={{justifyContent: 'space-between'}}>

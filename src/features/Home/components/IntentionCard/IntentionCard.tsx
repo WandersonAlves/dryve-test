@@ -8,6 +8,10 @@ import React from 'react';
 import styled from 'styled-components';
 import TCrossIcon from '../../../../icons/tcross.png';
 
+interface IIntentionCardProps {
+  readonly style?: React.CSSProperties;
+}
+
 const IntentionCardContainer = styled(Card)`
   padding: 18px 20px;
   display: flex;
@@ -27,14 +31,14 @@ const Text = styled.span`
   margin-bottom: 30px;
 `;
 
-const IntentionCard = () => (
-  <IntentionCardContainer>
+const IntentionCard = ({ style }: IIntentionCardProps) => (
+  <IntentionCardContainer style={style}>
     <Text>Top intenções de compra</Text>
-    <IntentionCardRow img={HB20Icon} text="HB20" value="197"/>
-    <IntentionCardRow img={OnixIcon} text="Onix" value="183"/>
-    <IntentionCardRow img={JeepIcon} text="Renegade" value="125"/>
-    <IntentionCardRow img={TCrossIcon} text="T-Cross" value="109"/>
-    <IntentionCardRow img={NissanIcon} text="Kicks" value="86" isLast/>
+    <IntentionCardRow img={HB20Icon} text="HB20" value="197" />
+    <IntentionCardRow img={OnixIcon} text="Onix" value="183" />
+    <IntentionCardRow img={JeepIcon} text="Renegade" value="125" />
+    <IntentionCardRow img={TCrossIcon} text="T-Cross" value="109" />
+    <IntentionCardRow img={NissanIcon} text="Kicks" value="86" isLast />
   </IntentionCardContainer>
 );
 

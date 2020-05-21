@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../components/Card';
 import HomeCard from '../features/Home/components/HomeCard/HomeCard';
-import CarIcon from '../icons/ic-directions-car.svg';
+import CarIcon from '../icons/car-selected.svg';
 import Device from '../icons/device.svg';
 import Money from '../icons/money.svg';
 

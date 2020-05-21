@@ -26,7 +26,9 @@ const TopBarContainer = styled(Card)`
   width: 100%;
   padding: 20px 30px;
   display: flex;
-  align-items: baseline;
+  height: 70px;
+  background-color: white;
+  align-items: center;
   justify-content: space-between;
 `;
 

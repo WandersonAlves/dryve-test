@@ -13,6 +13,7 @@ interface IHomeCardProps {
   isPositive?: boolean;
   text: string;
   icon: string;
+  style?: React.CSSProperties;
 }
 
 const Title = styled.span`
@@ -43,9 +44,9 @@ const HomeCardContainer = styled(FlexRow)`
   justify-content: space-between;
 `;
 
-const HomeCard = ({ title, value, percentage, text, isPositive, icon }: IHomeCardProps) => {
+const HomeCard = ({ title, value, percentage, text, isPositive, icon, style }: IHomeCardProps) => {
   return (
-    <Card>
+    <Card style={style}>
       <HomeCardContainer alignItems>
         <FlexColumn>
           <Title>{title}</Title>
