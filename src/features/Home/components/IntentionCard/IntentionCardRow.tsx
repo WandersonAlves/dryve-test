@@ -1,4 +1,5 @@
 import React from 'react';
+import Separator from '../../../../components/Separator';
 import styled from 'styled-components';
 
 const ImageFrame = styled.div`
@@ -25,12 +26,7 @@ const IntentionCardRowContainer = styled.div`
   margin-top: 14px;
 `;
 
-const Separator = styled.span`
-  border-radius: 4px;
-  width: 100%;
-  border: solid 1px rgba(0, 0, 0, 0.12);
-  margin-top: 14px;
-`;
+
 
 interface IIntentionCardRowProps {
   readonly isLast?: boolean;
