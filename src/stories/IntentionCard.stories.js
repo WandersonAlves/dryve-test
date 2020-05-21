@@ -6,4 +6,4 @@ export default {
   component: IntentionCard,
 };
 
-export const SambpleBar = () => <IntentionCard />;
+export const SampleCard = () => <IntentionCard />;

@@ -2,7 +2,7 @@ import React from 'react';
 import Separator from '../../../../components/Separator';
 import styled from 'styled-components';
 
-const ImageFrame = styled.div`
+const ImageFrame = styled.img`
   width: 36px;
   height: 36px;
   border-radius: 4px;
@@ -32,15 +32,15 @@ interface IIntentionCardRowProps {
   readonly isLast?: boolean;
   readonly text: string;
   readonly value: string;
-  readonly img?: string;
+  readonly img: string;
 }
 
-const IntentionCardRow = ({ isLast, text, value }: IIntentionCardRowProps) => (
+const IntentionCardRow = ({ isLast, text, value, img }: IIntentionCardRowProps) => (
   <>
     <IntentionCardRowContainer>
-      <ImageFrame />
+      <ImageFrame src={img}/>
       <Text style={{ flexGrow: 1, marginLeft: 14 }}>{text}</Text>
-      <Text style={{ marginRight: 14 }}>{value}</Text>
+      <Text style={{ marginRight: 28 }}>{value}</Text>
     </IntentionCardRowContainer>
     {isLast ? null : <Separator />}
   </>
