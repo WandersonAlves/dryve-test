@@ -6,4 +6,4 @@ export default {
   component: Topbar,
 };
 
-export const SambpleBar = () => <Topbar />;
+export const SampleTopBar = () => <Topbar />;

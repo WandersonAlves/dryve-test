@@ -7,17 +7,17 @@ import SearchIcon from '../icons/search.svg';
 import styled from 'styled-components';
 
 const BackofficeText = styled.span`
-  font-family: Roboto;
-  font-size: 10px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: uppercase;
   color: #a5abb7;
-  margin-top: 10px;
+  margin-top: 5px;
   ::after {
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: uppercase;
     content: 'backoffice';
   }
 `;

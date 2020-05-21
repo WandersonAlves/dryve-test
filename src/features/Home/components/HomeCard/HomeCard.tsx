@@ -17,6 +17,7 @@ interface IHomeCardProps {
 
 const Title = styled.span`
   opacity: 0.5;
+  font-family: Inter;
   font-size: 10px;
   font-weight: 500;
   font-stretch: normal;
@@ -29,6 +30,7 @@ const Title = styled.span`
 
 const Value = styled.span`
   font-size: 34px;
+  font-family: Inter;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

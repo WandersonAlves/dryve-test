@@ -38,6 +38,7 @@ const Icon = styled.img`
 
 const HomePercentage = styled.span<IPercentageTextProps>`
   font-size: 12px;
+  font-family: Inter;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

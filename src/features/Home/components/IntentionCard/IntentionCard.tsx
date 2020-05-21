@@ -10,6 +10,7 @@ const IntentionCardContainer = styled(Card)`
 `;
 
 const Text = styled.span`
+  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   font-stretch: normal;

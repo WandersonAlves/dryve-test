@@ -16,6 +16,7 @@ const Text = styled.span`
   line-height: 1.71;
   letter-spacing: 0.1px;
   color: rgba(0, 0, 0, 0.87);
+  font-family: Inter;
 `;
 
 const IntentionCardRowContainer = styled.div`
