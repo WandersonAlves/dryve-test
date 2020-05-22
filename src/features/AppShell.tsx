@@ -18,12 +18,15 @@ const ContainerShell = styled.div`
 `;
 
 const RouteContainer = styled.div`
-  margin: 30px;
+  margin: 0 30px;
+  margin-bottom: 30px;
   padding-right: 55px;
+  padding-bottom: 30px;
   overflow: auto;
 `;
 
 const GridContainer = styled.div`
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(9, [col-start] 1fr);
   grid-template-rows: repeat(7, [row-start] 1fr);
