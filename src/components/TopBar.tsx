@@ -23,13 +23,12 @@ const BackofficeText = styled.span`
 `;
 
 const TopBarContainer = styled(Card)`
-  width: 100%;
   padding: 20px 30px;
   display: flex;
-  height: 70px;
   background-color: white;
   align-items: center;
   justify-content: space-between;
+  grid-area: topbar;
 `;
 
 const TopBar = () => (

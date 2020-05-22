@@ -10,43 +10,50 @@ import TopBar from '../components/TopBar';
 const ContainerShell = styled.div`
   max-height: 100vh;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: 121px calc(100% - 121px);
+  grid-template-rows: 100px 100vh;
+  grid-template-areas: 'leftbar topbar';
+  grid-gap: 0;
 `;
 
 const RouteContainer = styled.div`
-  display: grid;
-  height: 100%;
-  width: 100%;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-template-rows: repeat(12, [row-start] 48px);
-  grid-gap: 20px;
+  margin: 30px;
+  padding-right: 55px;
+  overflow: auto;
 `;
 
-const OverflowingContainer = styled.div`
-  margin: 30px;
-  margin-right: 55px;
-  width: 100%;
-  height: 100%;
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(9, [col-start] 1fr);
+  grid-template-rows: repeat(7, [row-start] 1fr);
+  grid-template-areas:
+    'card1 card1 card1 card2 card2 card2 card3 card3 card3'
+    'pane pane pane pane pane pane buyIntention buyIntention buyIntention'
+    'pane pane pane pane pane pane buyIntention buyIntention buyIntention'
+    'pane pane pane pane pane pane buyIntention buyIntention buyIntention'
+    'pane pane pane pane pane pane chart chart chart'
+    'pane pane pane pane pane pane chart chart chart'
+    'footer footer footer footer footer footer footer footer footer';
+  grid-gap: 20px;
 `;
 
 function App() {
   return (
     <ContainerShell>
       <LeftBar />
-      <FlexRow style={{ width: '100%' }}>
-        <TopBar />
-        <OverflowingContainer>
-          <RouteContainer>
-            <BrowserRouter>
-              <Switch>
-                <Route path="/home" component={Home} />
-                <Route path="/" component={Home} />
-              </Switch>
-            </BrowserRouter>
-            <Footer />
-          </RouteContainer>
-        </OverflowingContainer>
-      </FlexRow>
+      <TopBar />
+      <RouteContainer>
+        <GridContainer>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/home" component={Home} />
+              <Route path="/" component={Home} />
+            </Switch>
+          </BrowserRouter>
+          <Footer />
+        </GridContainer>
+      </RouteContainer>
     </ContainerShell>
   );
 }

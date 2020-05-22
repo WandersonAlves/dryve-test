@@ -23,7 +23,8 @@ const LeftBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5%;
+  grid-area: leftbar;
+  grid-row: 1/3;
 `;
 
 const Icon = styled.img`

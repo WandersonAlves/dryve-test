@@ -1,4 +1,5 @@
 import Card from '../../../../components/Card';
+import CommonCardText from '../../../../components/CommonCardText';
 import HB20Icon from '../../../../icons/hb20.png';
 import IntentionCardRow from './IntentionCardRow';
 import JeepIcon from '../../../../icons/jeep.png';
@@ -16,24 +17,12 @@ const IntentionCardContainer = styled(Card)`
   padding: 18px 20px;
   display: flex;
   flex-direction: column;
-`;
-
-const Text = styled.span`
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.71;
-  letter-spacing: 0.1px;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.87);
-  margin-bottom: 30px;
+  overflow: auto;
 `;
 
 const IntentionCard = ({ style }: IIntentionCardProps) => (
   <IntentionCardContainer style={style}>
-    <Text>Top intenções de compra</Text>
+    <CommonCardText style={{ marginBottom: 30 }}>Top intenções de compra</CommonCardText>
     <IntentionCardRow img={HB20Icon} text="HB20" value="197" />
     <IntentionCardRow img={OnixIcon} text="Onix" value="183" />
     <IntentionCardRow img={JeepIcon} text="Renegade" value="125" />
