@@ -27,7 +27,7 @@ const Icon = styled.img`
 const LeftBar = () => (
   <LeftBarContainer>
     <Avatar src={AvatarImg} />
-    <Link to="/">
+    <Link to="/home">
       <Icon src={HomeIcon} />
     </Link>
     <Link to="people">
