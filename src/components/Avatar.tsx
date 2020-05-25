@@ -5,7 +5,6 @@ const AvatarPic = styled.img`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin: 38px 0;
   background-size: cover;
 `;
 

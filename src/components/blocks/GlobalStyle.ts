@@ -8,6 +8,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     background-color: ${BackgroundColor}
   }
+  .percentageChart {
+    font-family: Inter;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  font-weight: 600px;
+  letter-spacing: normal;
+  color: #a5abb7;
+  }
   .apexcharts-legend-text{
     font-weight: 600 !important;
     font-family: 'Inter', sans-serif !important;

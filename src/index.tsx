@@ -1,6 +1,6 @@
 import * as serviceWorker from './serviceWorker';
 import App from './features/AppShell';
-import GlobalStyle from './components/blocks/Body';
+import GlobalStyle from './components/blocks/GlobalStyle';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

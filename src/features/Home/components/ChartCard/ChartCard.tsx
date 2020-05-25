@@ -20,7 +20,8 @@ const options: ApexChart.ApexOptions = {
       vertical: 5
     },
     formatter: (v, o) => {
-      return v + ` ${o.w.config.series[o.seriesIndex]}%`;
+      const percentage = `${o.w.config.series[o.seriesIndex]}%`;
+      return v + ` <span class="percentageChart">${percentage}</span>`;
     },
   },
   dataLabels: {
