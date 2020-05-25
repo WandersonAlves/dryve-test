@@ -1,3 +1,4 @@
+import Avatar from './Avatar';
 import AvatarImg from '../assets/avatar.jpg';
 import CarUnselectedIcon from '../icons/car-unselected.svg';
 import HomeIcon from '../icons/ic-home.svg';
@@ -6,16 +7,6 @@ import React from 'react';
 import styled from "styled-components";
 import TriangleIcon from '../icons/ic-vector-triangle.svg';
 import WalletIcon from '../icons/wallet.svg';
-
-const Avatar = styled.img`
-  width: 64px;
-  height: 64px;
-  border: solid 2px #0065ff;
-  outline-offset: -10px;
-  background-color: #d8d8d8;
-  border-radius: 50%;
-  margin: 38px 0;
-`;
 
 const LeftBarContainer = styled.div`
   box-shadow: 1px 0 0 0 #e0e0e0;

@@ -11,7 +11,7 @@ const ContainerShell = styled.div`
   max-height: 100vh;
   height: 100vh;
   display: grid;
-  grid-template-columns: 121px calc(100% - 121px);
+  grid-template-columns: 90px calc(100% - 90px);
   grid-template-rows: 100px 1fr;
   grid-template-areas: 'leftbar topbar';
   grid-gap: 0;
