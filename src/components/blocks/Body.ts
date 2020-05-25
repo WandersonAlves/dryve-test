@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     background-color: ${BackgroundColor}
   }
+  .apexcharts-legend-text{
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+  }
   ::-webkit-scrollbar-track
   {
       border-radius: 10px;

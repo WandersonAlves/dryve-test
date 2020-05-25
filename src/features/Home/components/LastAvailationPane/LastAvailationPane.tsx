@@ -30,6 +30,7 @@ const MoreText = styled.span`
   letter-spacing: 0.1px;
   text-align: right;
   color: #0065ff;
+  cursor: pointer;
 `;
 
 const ItensContainer = styled.div`
@@ -56,6 +57,14 @@ const LastAvailationPane = () => (
       </FlexRow>
       <Separator />
       <ItensContainer>
+        <LastAvailationRow />
+        <LastAvailationRow />
+        <LastAvailationRow />
+        <LastAvailationRow />
+        <LastAvailationRow />
+        <LastAvailationRow />
+        <LastAvailationRow />
+        <LastAvailationRow />
         <LastAvailationRow />
         <LastAvailationRow />
         <LastAvailationRow />
