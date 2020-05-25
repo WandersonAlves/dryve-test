@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
   {
     opacity: 0.1;
     border-radius: 10px;
-    width: 5px;
+    width: 4px;
     background-color: rgba(0,0,0,0.1);
   }
 

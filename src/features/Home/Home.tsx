@@ -6,9 +6,25 @@ import IntentionCard from './components/IntentionCard/IntentionCard';
 import LastAvailationPane from './components/LastAvailationPane/LastAvailationPane';
 import MoneyIcon from '../../icons/money.svg';
 import React from 'react';
+import styled from 'styled-components';
+
+const GridContainer = styled.div`
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(9, [col-start] 1fr);
+  grid-template-rows: repeat(6, [row-start] 1fr);
+  grid-template-areas:
+    'card1 card1 card1 card2 card2 card2 card3 card3 card3'
+    'pane pane pane pane pane pane buyIntention buyIntention buyIntention'
+    'pane pane pane pane pane pane buyIntention buyIntention buyIntention'
+    'pane pane pane pane pane pane buyIntention buyIntention buyIntention'
+    'pane pane pane pane pane pane chart chart chart'
+    'pane pane pane pane pane pane chart chart chart';
+  grid-gap: 20px;
+`;
 
 const Home = () => (
-  <>
+  <GridContainer>
     <HomeCard
       style={{ gridArea: 'card1' }}
       percentage={36}
@@ -38,7 +54,7 @@ const Home = () => (
     <IntentionCard style={{ gridArea: 'buyIntention' }} />
     <LastAvailationPane />
     <ChartCard />
-  </>
+  </GridContainer>
 );
 
 export default Home;
