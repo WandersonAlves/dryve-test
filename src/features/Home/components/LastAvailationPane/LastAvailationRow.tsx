@@ -1,7 +1,7 @@
+import { ICar } from '../../../../interfaces';
 import Chip from '../../../../components/Chip';
 import FlexColumn from '../../../../components/blocks/FlexColumn';
 import FlexRow from '../../../../components/blocks/FlexRow';
-import JeepPic from '../../../../assets/jeep.jpg'
 import React from 'react';
 import Separator from '../../../../components/Separator';
 import styled from 'styled-components';
@@ -37,33 +37,41 @@ const MinimumValue = styled(UpperText)`
 `;
 interface ILastAvailationRowProps {
   readonly isLast?: boolean;
+  readonly car: ICar;
 }
 
-const LastAvailationRow = ({ isLast }: ILastAvailationRowProps) => (
-  <>
-    <LastAvailationRowContainer>
-      <FlexRow style={{ width: '45%' }}>
-        <Image src={JeepPic} />
-        <FlexColumn style={{ lineHeight: 1, justifyContent: 'center' }}>
-          <TextBold>Jeep compass</TextBold>
-          <UpperText>gdl8019</UpperText>
-          <UpperText>2018 - diesel</UpperText>
-          <UpperText>Automático - 70.972 km</UpperText>
+const LastAvailationRow = ({ isLast, car }: ILastAvailationRowProps) => {
+  const formatCurrency = (value: number) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value);
+  return (
+    <>
+      <LastAvailationRowContainer>
+        <FlexRow style={{ width: '45%' }}>
+          <Image src={car.image} />
+          <FlexColumn style={{ lineHeight: 1, justifyContent: 'center' }}>
+            <TextBold>{car.name}</TextBold>
+            <UpperText>{car.version_name}</UpperText>
+            <UpperText>
+              {car.manufacturing_year} - {car.fuel_type}
+            </UpperText>
+            <UpperText>
+              {car.transmission_type} - {car.mileage} km
+            </UpperText>
+          </FlexColumn>
+        </FlexRow>
+        <FlexColumn style={{ width: '25%' }}>
+          <UpperText>anúncio</UpperText>
+          <TextBold>{formatCurrency(car.ad_selling_price)}</TextBold>
+          <UpperText>mínimo aceito</UpperText>
+          <MinimumValue>{formatCurrency(115.560)}</MinimumValue>
         </FlexColumn>
-      </FlexRow>
-      <FlexColumn style={{ width: '25%' }}>
-        <UpperText>anúncio</UpperText>
-        <TextBold>R$ 115.560</TextBold>
-        <UpperText>mínimo aceito</UpperText>
-        <MinimumValue>R$ 115.560</MinimumValue>
-      </FlexColumn>
-      <FlexColumn style={{ justifyContent: 'center', alignItems: 'center' }}>
-        <Chip style={{ backgroundColor: '#f3f7ff', marginBottom: 18 }} text="Aguardando precisificação"/>
-        <MinimumValue>18/04/2020 às 14:35</MinimumValue>
-      </FlexColumn>
-    </LastAvailationRowContainer>
-    {isLast ? null : <Separator />}
-  </>
-);
+        <FlexColumn style={{ justifyContent: 'center', alignItems: 'center' }}>
+          <Chip style={{ backgroundColor: '#f3f7ff', marginBottom: 18 }} text="Aguardando precisificação" />
+          <MinimumValue>18/04/2020 às 14:35</MinimumValue>
+        </FlexColumn>
+      </LastAvailationRowContainer>
+      {isLast ? null : <Separator />}
+    </>
+  );
+};
 
 export default LastAvailationRow;
