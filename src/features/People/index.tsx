@@ -1,4 +1,5 @@
 import Add from '@material-ui/icons/Add';
+import Checkbox from '@material-ui/core/Checkbox';
 import Chip from '../../components/Chip';
 import FilterListIcon from '@material-ui/icons/FilterList';
 import FlexColumn from '../../components/blocks/FlexColumn';
@@ -30,50 +31,50 @@ const peopleList: IPerson[] = [
   {
     name: 'Paulo',
     status: 'client',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
+    name: 'Marta',
     status: 'client',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
+    name: 'Maria',
     status: 'client',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
+    name: 'Edward',
     status: 'lead',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
+    name: 'Rebeca',
     status: 'client',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
+    name: 'Vicent',
     status: 'lead',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
+    name: 'Cloud',
     status: 'client',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
   {
-    name: 'Paulo',
-    status: 'client',
-    phone: '3728372',
-    email: 'hasoihea@gmail.com',
+    name: 'Aerith',
+    status: 'lead',
+    phone: '(16) 99653-8899',
+    email: 'ph.mattos@gmail.com',
   },
 ];
 
@@ -123,9 +124,12 @@ const People = () => {
       </FlexRow>
       <Paper>
         <TableContainer>
-          <Table stickyHeader>
+          <Table>
             <TableHead>
               <TableRow>
+                <TableCell padding="checkbox">
+                  <Checkbox />
+                </TableCell>
                 <TableCell align="left">
                   <UpperText>nome</UpperText>
                 </TableCell>
@@ -143,6 +147,9 @@ const People = () => {
             <TableBody>
               {peopleList.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
                 <TableRow key={index}>
+                  <TableCell padding="checkbox">
+                    <Checkbox />
+                  </TableCell>
                   <TableCell align="left">{row.name}</TableCell>
                   <TableCell align="left">
                     <Chip
