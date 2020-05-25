@@ -1,3 +1,4 @@
+import Chip from '../../../../components/Chip';
 import FlexColumn from '../../../../components/blocks/FlexColumn';
 import FlexRow from '../../../../components/blocks/FlexRow';
 import JeepPic from '../../../../assets/jeep.jpg'
@@ -42,7 +43,7 @@ const LastAvailationRow = ({ isLast }: ILastAvailationRowProps) => (
   <>
     <LastAvailationRowContainer>
       <FlexRow style={{ width: '45%' }}>
-        <Image src={JeepPic}/>
+        <Image src={JeepPic} />
         <FlexColumn style={{ lineHeight: 1, justifyContent: 'center' }}>
           <TextBold>Jeep compass</TextBold>
           <UpperText>gdl8019</UpperText>
@@ -57,9 +58,7 @@ const LastAvailationRow = ({ isLast }: ILastAvailationRowProps) => (
         <MinimumValue>R$ 115.560</MinimumValue>
       </FlexColumn>
       <FlexColumn style={{ justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ padding: '5px 10px', borderRadius: 13, backgroundColor: '#f3f7ff', marginBottom: 18 }}>
-          <UpperText style={{ textTransform: 'unset' }}>Aguardando precisificação</UpperText>
-        </div>
+        <Chip style={{ backgroundColor: '#f3f7ff', marginBottom: 18 }} text="Aguardando precisificação"/>
         <MinimumValue>18/04/2020 às 14:35</MinimumValue>
       </FlexColumn>
     </LastAvailationRowContainer>

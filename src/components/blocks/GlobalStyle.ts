@@ -10,14 +10,34 @@ const GlobalStyle = createGlobalStyle`
   }
   .percentageChart {
     font-family: Inter;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  font-weight: 600px;
-  letter-spacing: normal;
-  color: #a5abb7;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    font-weight: 600px;
+    letter-spacing: normal;
+    color: #a5abb7;
+  }
+  .MuiTablePagination-root p {
+    font-family: Inter;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #a5abb7 !important;
+  }
+  .MuiToolbar-root {
+    p:last-of-type {
+      flex-grow: 1;
+      text-align: left;
+    }
+  }
+  .MuiToolbar-root .MuiTablePagination-spacer {
+    flex: unset;
   }
   .apexcharts-legend-text{
     font-weight: 600 !important;

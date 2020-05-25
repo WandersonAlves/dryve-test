@@ -1,8 +1,8 @@
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
-import FlexRow from '../components/blocks/FlexRow';
 import Footer from '../components/Footer';
-import Home from './Home/Home';
+import Home from './Home';
 import LeftBar from '../components/LeftBar';
+import People from './People';
 import React from 'react';
 import styled from 'styled-components';
 import TopBar from '../components/TopBar';
@@ -27,19 +27,20 @@ const RouteContainer = styled.div`
 function App() {
   return (
     <ContainerShell>
-      <LeftBar />
-      <TopBar />
-      <div style={{ overflow: 'auto' }}>
-        <RouteContainer>
-          <BrowserRouter>
+      <BrowserRouter>
+        <LeftBar />
+        <TopBar />
+        <div style={{ overflow: 'auto' }}>
+          <RouteContainer>
             <Switch>
               <Route path="/home" component={Home} />
+              <Route path="/people" component={People} />
               <Route path="/" component={Home} />
             </Switch>
-          </BrowserRouter>
-          <Footer />
-        </RouteContainer>
-      </div>
+            <Footer />
+          </RouteContainer>
+        </div>
+      </BrowserRouter>
     </ContainerShell>
   );
 }

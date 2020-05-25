@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
 import AvatarImg from '../assets/avatar.jpg';
 import CarUnselectedIcon from '../icons/car-unselected.svg';
@@ -26,8 +27,12 @@ const Icon = styled.img`
 const LeftBar = () => (
   <LeftBarContainer>
     <Avatar src={AvatarImg} />
-    <Icon src={HomeIcon} />
-    <Icon src={PersonIcon} />
+    <Link to="/">
+      <Icon src={HomeIcon} />
+    </Link>
+    <Link to="people">
+      <Icon src={PersonIcon} />
+    </Link>
     <Icon src={CarUnselectedIcon} />
     <Icon src={TriangleIcon} />
     <Icon src={WalletIcon} />
